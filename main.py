@@ -20,11 +20,11 @@ while True:
     result = controller.process(user)
 
     if result.action == "answer":
-        print(f"\n{GREEN}Terminal AI >> {RESET}{result.response}")
+        print(f"\n{GREEN}Chottu >> {RESET}{result.response}")
 
     elif result.action == "command":
 
-        print(f"\n{RED}Terminal AI wants to run: {RESET}{result.command} ; {result.reason}")
+        print(f"\n{RED}Chottu wants to run: {RESET}{result.command} ; {result.reason}")
 
         confirm = input("\nExecute? (y/n):")
 
@@ -32,7 +32,7 @@ while True:
 
             output = run_command(result.command)
 
-            print(f"\n{GREEN}Terminal AI >> {RESET}{output['stdout']}")
+            print(f"\n{GREEN}Chottu >> {RESET}{output['stdout']}")
 
             if output["stderr"]:
-                print(f"\n{GREEN}Terminal AI Error: {RESET}{output['stderr']}")  
+                print(f"\n{GREEN}Chottu Error: {RESET}{output['stderr']}")  
